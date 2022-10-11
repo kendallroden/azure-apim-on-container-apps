@@ -1,6 +1,7 @@
 param location string
 param apiManagementName string
 param selfHostedGatewayName string
+param publisherEmail string 
 
 // API Management Instance
 resource apiManagement 'Microsoft.ApiManagement/service@2021-08-01' = {
@@ -12,7 +13,7 @@ resource apiManagement 'Microsoft.ApiManagement/service@2021-08-01' = {
   }
   properties: {
     publisherName: 'Contoso'
-    publisherEmail: '<email-address>'
+    publisherEmail: publisherEmail
   }
 }
 

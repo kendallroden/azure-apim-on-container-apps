@@ -12,7 +12,7 @@ Playground to run Azure API Management's self-hosted gateway on Azure Container 
 
 1. Deploy the Azure API Management with Bicep, for example:
 ```shell
-az deployment group create --resource-group <rg-name> --template-file .\deploy\api-gateway.bicep --parameters resourceNamePrefix='apim-container-apps-sandbox'
+az deployment group create --resource-group <rg-name> --template-file .\deploy\api-gateway.bicep --parameters resourceNamePrefix='apim-container-apps-sandbox' publisherEmail=<your email>
 ```
 2. Generate a gateway token in the "Deployment" blade of your self-hosted gateway
 3. Deploy the application to Azure Container Apps with Bicep, for example:
